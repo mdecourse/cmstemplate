@@ -133,28 +133,17 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">以CMSiMDE 建網頁 << <a href='以CMSiMDE 建網頁.html'>Previous</a> <a href='標題選擇.html'>Next</a> >> 標題選擇<br /><h1>注意事項</h1>
-<p>因為 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 將 CMSiMDE 倉儲作為 submodule, 因此使用者利用 cmstemplate 作為 template 後, 必須使用 git clone --recurse-submodules 取下遠端倉儲.</p>
-<p>例如:</p>
-<p style="padding-left: 30px;">若使用者的倉儲 URL 為 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a></p>
-<p style="padding-left: 30px;">則可以在近端利用:</p>
-<p style="padding-left: 30px;">git clone --recurse-submodules <a href="https://github.com/mdecourse/cmstemplate.git">https://github.com/mdecourse/cmstemplate.git</a></p>
-<p style="padding-left: 30px;">將遠端倉儲資料存入 cmstemplate 目錄中.</p>
-<p>目前的 cmstemplate 內建 cms.bat 與 acp.bat 等兩個 batch 檔案, 可以協助使用者直接在倉儲根目錄啟動 CMSiMDE 動態網頁, 以及單一指令式即可完成 git add, git commit 以及 git push, 但是前提是使用者必須設定以 ssh 方式與 Github 倉儲進行驗證.</p>
-<p>例如:</p>
-<p style="padding-left: 30px;">若使用者已經將倉儲內容 clone 至近端, 且已經帶有 cmsimde 子模組的內容.</p>
-<p style="padding-left: 30px;">則可以在近端命令列進入 cmstemplate 倉儲目錄執行:</p>
-<p style="padding-left: 30px;">cms.bat</p>
-<p style="padding-left: 30px;">開啟動態網頁系統. 並以 <a>https://localhost:9443</a> 開啟.</p>
-<p style="padding-left: 30px;">一旦完成動態網頁的編輯, 利用 Generate Pages 可以轉為靜態網站, 且各 html 檔案將位於 content 目錄中.</p>
-<p style="padding-left: 30px;">若使用者希望檢查近端靜態網頁的內容, 可以利用 SciTE 開啟倉儲中的 http-server.py, 並利用瀏覽器以 <a href="https://localhost:8444">https://localhost:8444</a> 檢查靜態網頁內容.</p>
-<p style="padding-left: 30px;">一旦使用者要將近端倉儲的動態與靜態網頁內容推向 Github, 則必須將倉儲中 .git/config 的 url, 從 https 改為 ssh 的連線格式:</p>
-<p style="padding-left: 30px;">例如:</p>
-<p style="padding-left: 60px;">原先 .git/config origin 的 url 為 url = <a href="https://github.com/mdecourse/cmstemplate.git,">https://github.com/mdecourse/cmstemplate.git,</a> 則必須改為:</p>
-<p style="padding-left: 60px;">url = <a href="mailto:git@github.com:mdecourse/cmstemplate.git">git@github.com:mdecourse/cmstemplate.git</a></p>
-<p style="padding-left: 60px;">之後假如使用者要以 "add some files" 字串當作提交說明訊息, 則可以在命令列中的倉儲目錄執行:</p>
-<p style="padding-left: 60px;">acp.bat "add some files"</p>
-<br />以CMSiMDE 建網頁 << <a href='以CMSiMDE 建網頁.html'>Previous</a> <a href='標題選擇.html'>Next</a> >> 標題選擇</div>
+    <div id="tipue_search_content">注意事項 << <a href='注意事項.html'>Previous</a> <br /><h1>標題選擇</h1>
+<p>由於 CMSiMDE 中的動態網站透過 config/content.htm 的 H1~H3 超文件標註進行分頁, 因此使用者利用 cms.bat 開啟動態網站後, 必須注意各頁面標題文字的選擇:</p>
+<ol>
+<li><span style="background-color: #ffff99;">頁面標題文字儘量簡短</span> - 頁面標題就有如文章的章節標題, 只要該標題具有該頁面內容的代表性即可, 越簡短越好.</li>
+<li><span style="background-color: #ffff99;">頁面標題文字不要使用標點符號</span> - 因為標點符號中的 "/" 會造成頁面擷取時 URL 指令分段上的誤判, 至於標題文字中若有 ":" 則會在動態內容轉靜態內容時, 因 Windows 不允許檔案名稱帶有 ":" 而無法轉檔.</li>
+<li><span style="background-color: #ffff99;">頁面標題中不可以有超文件標註</span> - 由於 CMSiMDE 動態網站編輯器採用 GUI 進行, 採用滑鼠標修頁面標題時, 可能無意中將 HTML 標註放入 H1~H3 標題文字中, 如此可能會造成 CMSiMDE 分頁錯誤而無法開啟動態網站. 當使用者要檢查所使用的頁面標題是否帶有 html 標註, 可以透過編輯功能中的 Source Code 檢查.</li>
+<li><span style="background-color: #ffff99;">H1 標題數量不可過多</span> - 由於 CMSiMDE 的靜態網站支援手機模式, 當頁面 H1 標題數量超過 10 個之後, 頁面標題可能無法在螢幕上最上方以一列顯示, 而是必須出現在第二行, 結果將會導致頁面展開時的 Javascript 程式產生錯亂, 結果為無法直接以滑鼠點擊進入特定頁面.</li>
+</ol>
+<p></p>
+<p></p>
+<p></p><br />注意事項 << <a href='注意事項.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
