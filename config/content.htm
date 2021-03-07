@@ -6,17 +6,36 @@
 <p>使用 Edit All 模式, 無法使用 csave 按鈕（尚未測試).</p>
 <h1>CMSiMDE</h1>
 <p>CMSiMDE (<a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a>) 是一套以 Python 與 Flask 框架編寫的網際內容管理系統,</p>
-<p>使用 CMSiMDE 建議使用者安裝 flask flask_cors bs4 lxml pelican markdown leo 等模組. 其中的 flask flask_cors bs4 lxml pelican markdown為啟動 CMSiMDE 的必要模組, 而 leo 則是 CMSMDE 開發者所使用的大鋼管理工具, 可以用於與 CMSiMDE 整合的 Pelican blog 及 Reveal.js 網際簡報編輯之用.</p>
-<h1>以CMSiMDE 建網頁</h1>
+<p>使用 CMSiMDE 建議使用者安裝 flask flask_cors bs4 lxml pelican markdown leo 等模組. 其中的 flask flask_cors bs4 lxml pelican markdown為啟動 CMSiMDE 的必要模組, 而 leo 則是 CMSMDE 開發者所使用的大綱管理工具, 可以用於與 CMSiMDE 整合的 Pelican blog 及 Reveal.js 網際簡報編輯之用.</p><h1>以CMSiMDE 建網頁</h1>
 <p>由於 CMSiMDE 帶有動態網頁與靜態網頁等兩個部分, 動態網頁執行時需要該伺服器能夠執行 Python 3, 以及 flask flask_cors bs4 lxml pelican markdown 等模組. 而靜態網頁的伺服則只需要 WWW Server 即可.</p>
-<p>若使用者在 Github 使用 CMSiMDE 建立網頁, 可以透過 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> template 建立, 步驟如下:</p>
-<p>使用者登入 Github</p>
-<p>將瀏覽器連線至 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 頁面後, 點擊 Use this template 按鈕後, 選擇所要採用的 repository 名稱後, 就可以建立以 CMSiMDE 作為子模組的 Github 倉儲.</p>
-<p>假如使用者所選擇的倉儲名稱為: 帳號.github.io, 則 Github 會自動設定該倉儲的 main 分支為 Github Pages 根目錄, 意即一旦 Github Pages 完成轉檔 (提交訊息之後會出現綠勾), 則該倉儲的對應網頁將為: https://帳號.github.io</p>
-<p>若使用利用 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 作為 template 所建立的倉儲名稱並非 帳號.github.io, 則使用者必須自行至該倉儲的 settings/Github Pages 選項中將 main branch 設為 Github Pages 對應的 root 目錄. 之後, Github 將會採用: 帳號.github.io/倉儲名稱 作為與該倉儲對應的 Github Pages 網址.</p>
-<h1>注意事項</h1>
+<p>若使用者在 Github 使用 CMSiMDE 建立網頁, 可以透過 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> template 建立, 步驟與兩種設定方式如下:</p>
+<ol>
+<li>使用者登入 Github</li>
+<li>將瀏覽器連線至 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 頁面後, 點擊 Use this template 按鈕後, 選擇所要採用的 repository 名稱後, 就可以建立以 CMSiMDE 作為子模組的 Github 倉儲.</li>
+<li>假如使用者所選擇的倉儲名稱為: 帳號.github.io, 則 Github 會自動設定該倉儲的 main 分支為 Github Pages 根目錄, 意即一旦 Github Pages 完成轉檔 (提交訊息之後會出現綠勾), 則該倉儲的對應網頁將為: https://帳號.github.io</li>
+<li>若使用利用 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 作為 template 所建立的倉儲名稱並非 帳號.github.io, 則使用者必須自行至該倉儲的 settings/Github Pages 選項中將 main branch 設為 Github Pages 對應的 root 目錄. 之後, Github 將會採用: 帳號.github.io/倉儲名稱 作為與該倉儲對應的 Github Pages 網址.</li>
+</ol><h1>注意事項</h1>
 <p>因為 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 將 CMSiMDE 倉儲作為 submodule, 因此使用者利用 cmstemplate 作為 template 後, 必須使用 git clone --recurse-submodules 取下遠端倉儲.</p>
+<p>例如:</p>
+<p style="padding-left: 30px;">若使用者的倉儲 URL 為 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a></p>
+<p style="padding-left: 30px;">則可以在近端利用:</p>
+<p style="padding-left: 30px;">git clone --recurse-submodules <a href="https://github.com/mdecourse/cmstemplate.git">https://github.com/mdecourse/cmstemplate.git</a></p>
+<p style="padding-left: 30px;">將遠端倉儲資料存入 cmstemplate 目錄中.</p>
 <p>目前的 cmstemplate 內建 cms.bat 與 acp.bat 等兩個 batch 檔案, 可以協助使用者直接在倉儲根目錄啟動 CMSiMDE 動態網頁, 以及單一指令式即可完成 git add, git commit 以及 git push, 但是前提是使用者必須設定以 ssh 方式與 Github 倉儲進行驗證.</p>
+<p>例如:</p>
+<p style="padding-left: 30px;">若使用者已經將倉儲內容 clone 至近端, 且已經帶有 cmsimde 子模組的內容.</p>
+<p style="padding-left: 30px;">則可以在近端命令列進入 cmstemplate 倉儲目錄執行:</p>
+<p style="padding-left: 30px;">cms.bat</p>
+<p style="padding-left: 30px;">開啟動態網頁系統. 並以 <a>https://localhost:9443</a> 開啟.</p>
+<p style="padding-left: 30px;">一旦完成動態網頁的編輯, 利用 Generate Pages 可以轉為靜態網站, 且各 html 檔案將位於 content 目錄中.</p>
+<p style="padding-left: 30px;">若使用者希望檢查近端靜態網頁的內容, 可以利用 SciTE 開啟倉儲中的 http-server.py, 並利用瀏覽器以 <a href="https://localhost:8444">https://localhost:8444</a> 檢查靜態網頁內容.</p>
+<p style="padding-left: 30px;">一旦使用者要將近端倉儲的動態與靜態網頁內容推向 Github, 則必須將倉儲中 .git/config 的 url, 從 https 改為 ssh 的連線格式:</p>
+<p style="padding-left: 30px;">例如:</p>
+<p style="padding-left: 60px;">原先 .git/config origin 的 url 為 url = <a href="https://github.com/mdecourse/cmstemplate.git,">https://github.com/mdecourse/cmstemplate.git,</a> 則必須改為:</p>
+<p style="padding-left: 60px;">url = <a href="mailto:git@github.com:mdecourse/cmstemplate.git">git@github.com:mdecourse/cmstemplate.git</a></p>
+<p style="padding-left: 60px;">之後假如使用者要以 "add some files" 字串當作提交說明訊息, 則可以在命令列中的倉儲目錄執行:</p>
+<p style="padding-left: 60px;">acp.bat "add some files"</p>
+<p style="padding-left: 60px;"></p>
 <p></p>
 <p></p>
 <p></p>
