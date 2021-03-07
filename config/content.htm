@@ -6,7 +6,7 @@
 <p>使用 Edit All 模式, 無法使用 csave 按鈕（尚未測試).</p>
 <h1>CMSiMDE</h1>
 <p>CMSiMDE (<a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a>) 是一套以 Python 與 Flask 框架編寫的網際內容管理系統,</p>
-<p>使用 CMSiMDE 建議使用者安裝 flask flask_cors bs4 lxml pelican markdown leo 等模組. 其中的 flask flask_cors bs4 lxml pelican markdown為啟動 CMSiMDE 的必要模組, 而 leo 則是 CMSMDE 開發者所使用的大綱管理工具, 可以用於與 CMSiMDE 整合的 Pelican blog 及 Reveal.js 網際簡報編輯之用.</p><h1>以CMSiMDE 建網頁</h1>
+<p>使用 CMSiMDE 建議使用者安裝 flask flask_cors bs4 lxml pelican markdown leo 等模組. 其中的 flask flask_cors bs4 lxml pelican markdown為啟動 CMSiMDE 的必要模組, 而 leo 則是 CMSMDE 開發者所使用的大綱管理工具, 可以用於與 CMSiMDE 整合的 Pelican blog 及 Reveal.js 網際簡報編輯之用.</p><h1>建立網頁</h1>
 <p>由於 CMSiMDE 帶有動態網頁與靜態網頁等兩個部分, 動態網頁執行時需要該伺服器能夠執行 Python 3, 以及 flask flask_cors bs4 lxml pelican markdown 等模組. 而靜態網頁的伺服則只需要 WWW Server 即可.</p>
 <p>若使用者在 Github 使用 CMSiMDE 建立網頁, 可以透過 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> template 建立, 步驟與兩種設定方式如下:</p>
 <ol>
@@ -35,7 +35,16 @@
 <p style="padding-left: 60px;">url = <a href="mailto:git@github.com:mdecourse/cmstemplate.git">git@github.com:mdecourse/cmstemplate.git</a></p>
 <p style="padding-left: 60px;">之後假如使用者要以 "add some files" 字串當作提交說明訊息, 則可以在命令列中的倉儲目錄執行:</p>
 <p style="padding-left: 60px;">acp.bat "add some files"</p>
-<h1>標題選擇</h1>
+<h2>靜態網頁 404</h2>
+<p>當使用者將近端網頁倉儲資料推向 Github 後, commit 提交訊息之後若沒有出現綠勾, 表示靜態網頁無法轉檔成功, 這時連接靜態網頁時, 將會出現 404, 通常情況下是因為倉儲中 cmsimde 子模組的版次無法與遠端 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 中的版本對應.</p>
+<p>上述靜態網頁出現 404 錯誤訊息的處理方式如下:</p>
+<ol>
+<li>從 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 倉儲中複製最新版本的版次號, 以 <a href="https://github.com/mdecourse/cmsimde/commit/1c3aeec1f5d26b421743d2f5ef8bb7d5b99292af">2021/03/03 的版次</a>為例, 版次號為 1c3aeec1f5d26b421743d2f5ef8bb7d5b99292af, 使用者只需要最前面的 7 個字元, 也就是 1c3aeec.</li>
+<li>然後在近端倉儲中, 以命令列進入 cmsimde 目錄後執行: <span style="background-color: #ffff99;">git checkout 1c3aeec</span></li>
+<li>接著退回倉儲目錄, 以 git add, git commit 及 git push 將倉儲改版內容推向 Github 後應該就可以將倉儲正確轉為靜態網站內容.</li>
+</ol>
+<h2>動態網站錯誤</h2>
+<p>CMSiMDE 動態網站經常出現的錯誤是無法對 config/content.htm 分頁, 這時可以利用 SCiTE 編輯 content.htm, 找尋是否 H1~H3 標註中是否帶有特殊符號, 如 "/" 或 ":" 等.</p><h1>標題選擇</h1>
 <p>由於 CMSiMDE 中的動態網站透過 config/content.htm 的 H1~H3 超文件標註進行分頁, 因此使用者利用 cms.bat 開啟動態網站後, 必須注意各頁面標題文字的選擇:</p>
 <ol>
 <li><span style="background-color: #ffff99;">頁面標題文字儘量簡短</span> - 頁面標題就有如文章的章節標題, 只要該標題具有該頁面內容的代表性即可, 越簡短越好.</li>

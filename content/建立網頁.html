@@ -133,18 +133,15 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">標題選擇 << <a href='標題選擇.html'>Previous</a> <br /><h1>Fossil SCM</h1>
-<p>在 Github 之外, 可以同步將各倉儲資料存放至 Gitlab, Heroku (有 500 MB 容量限制) 與 Fossil SCM.</p>
-<p>希望整合 Github 與 Fossil SCM 倉儲步驟說明如下:</p>
-<p>針對 Github 中已經有 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 倉儲, 希望同步建 <a href="https://fossil.kmol.info/cmstemplate">https://fossil.kmol.info/cmstemplate</a> 與之內容同步.</p>
-<p>登入 fossil.kmol.info 主機, 在 /home/user/repository 目錄中, 以 fossil init cmstemplate.fossil 建立空倉儲. 此時 Fossil SCM 將會列出以登入帳號作為帳號的管理者密碼.</p>
-<p>管理者利用 <a href="https://fossil.kmol.info/cmstemplate">https://fossil.kmol.info/cmstemplate</a> 連結, 以 user 登入, 並利用上列管理者密碼進入管理區, 先行透過 Setup/users 變更 user 對應密碼.</p>
-<p>回到 Windows 以 <span style="background-color: #ffff99;">fossil clone https://user@fossil.kmol.info/cmstemplate cmstemplate.fossil</span> 取下倉儲資料, 過程中將需要輸入與 user 對應的密碼, 並被詢問是否儲存密碼, 若選擇儲存密碼則隨後的 fossil commit 將回自動提交推送.</p>
-<p>接著在近端必須開啟空 cmstemplate.fossil 倉儲, 主要目的是取得 __FOSSIL__, 並且以 git pull 完整拉下位於 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 中的資料並與空 __FOSSIL__ 進行整合. 其中在 Fossil SCM 端必須將 Setup/Settings 中的 default-csp 設為: <a href="https://fonts.googleapis.com">https://fonts.googleapis.com</a> (讓 CMSiMDE 靜態網頁可以在 Fossil SCM doc 頁面中正常顯示), 且勾選 dotfiles (讓 Fossil SCM 可以儲存 .git 中的版本資料).</p>
-<p></p>
-<p></p>
-<p></p>
-<p></p><br />標題選擇 << <a href='標題選擇.html'>Previous</a> </div>
+    <div id="tipue_search_content">CMSiMDE << <a href='CMSiMDE.html'>Previous</a> <a href='注意事項.html'>Next</a> >> 注意事項<br /><h1>建立網頁</h1>
+<p>由於 CMSiMDE 帶有動態網頁與靜態網頁等兩個部分, 動態網頁執行時需要該伺服器能夠執行 Python 3, 以及 flask flask_cors bs4 lxml pelican markdown 等模組. 而靜態網頁的伺服則只需要 WWW Server 即可.</p>
+<p>若使用者在 Github 使用 CMSiMDE 建立網頁, 可以透過 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> template 建立, 步驟與兩種設定方式如下:</p>
+<ol>
+<li>使用者登入 Github</li>
+<li>將瀏覽器連線至 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 頁面後, 點擊 Use this template 按鈕後, 選擇所要採用的 repository 名稱後, 就可以建立以 CMSiMDE 作為子模組的 Github 倉儲.</li>
+<li>假如使用者所選擇的倉儲名稱為: 帳號.github.io, 則 Github 會自動設定該倉儲的 main 分支為 Github Pages 根目錄, 意即一旦 Github Pages 完成轉檔 (提交訊息之後會出現綠勾), 則該倉儲的對應網頁將為: https://帳號.github.io</li>
+<li>若使用利用 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 作為 template 所建立的倉儲名稱並非 帳號.github.io, 則使用者必須自行至該倉儲的 settings/Github Pages 選項中將 main branch 設為 Github Pages 對應的 root 目錄. 之後, Github 將會採用: 帳號.github.io/倉儲名稱 作為與該倉儲對應的 Github Pages 網址.</li>
+</ol><br />CMSiMDE << <a href='CMSiMDE.html'>Previous</a> <a href='注意事項.html'>Next</a> >> 注意事項</div>
         
     <!-- footer -->
       <div class="container">
