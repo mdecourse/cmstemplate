@@ -122,7 +122,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li><a href='Gitlab 同步.html'>Gitlab 同步</a><li><a href='Heroku 部署.html'>Heroku 部署</a><li><a href='Fossil SCM.html'>Fossil SCM</a></li></ul><li><a href='建立網頁.html'>建立網頁</a><li class='has-children'><a href='注意事項.html'>注意事項</a><ul class='dropdown'><li><a href='標題選擇.html'>標題選擇</a><li><a href='靜態網頁 404.html'>靜態網頁 404</a><li><a href='動態網站錯誤.html'>動態網站錯誤</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li><a href='Gitlab 同步.html'>Gitlab 同步</a><li><a href='Heroku 部署.html'>Heroku 部署</a><li><a href='Fossil SCM.html'>Fossil SCM</a></li></ul><li><a href='建立網頁.html'>建立網頁</a><li class='has-children'><a href='注意事項.html'>注意事項</a><ul class='dropdown'><li><a href='標題選擇.html'>標題選擇</a><li><a href='靜態網頁 404.html'>靜態網頁 404</a><li><a href='動態網站錯誤.html'>動態網站錯誤</a></li></ul><li><a href='延伸開發.html'>延伸開發</a></li>
                       </ul>
                 </nav>
               </div>
@@ -140,7 +140,11 @@ img.add_border {
 <p>登入 fossil.kmol.info 主機, 在 /home/user/repository 目錄中, 以 fossil init cmstemplate.fossil 建立空倉儲. 此時 Fossil SCM 將會列出以登入帳號作為帳號的管理者密碼.</p>
 <p>管理者利用 <a href="https://fossil.kmol.info/cmstemplate">https://fossil.kmol.info/cmstemplate</a> 連結, 以 user 登入, 並利用上列管理者密碼進入管理區, 先行透過 Setup/users 變更 user 對應密碼.</p>
 <p>回到 Windows 以 <span style="background-color: #ffff99;">fossil clone https://user@fossil.kmol.info/cmstemplate cmstemplate.fossil</span> 取下倉儲資料, 過程中將需要輸入與 user 對應的密碼, 並被詢問是否儲存密碼, 若選擇儲存密碼則隨後的 fossil commit 將回自動提交推送.</p>
-<p>接著在近端必須開啟空 cmstemplate.fossil 倉儲, 主要目的是取得 __FOSSIL__, 並且以 git pull 完整拉下位於 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 中的資料並與空 __FOSSIL__ 進行整合. 其中在 Fossil SCM 端必須將 Setup/Settings 中的 default-csp 設為: <a href="https://fonts.googleapis.com">https://fonts.googleapis.com</a> (讓 CMSiMDE 靜態網頁可以在 Fossil SCM doc 頁面中正常顯示), 且勾選 dotfiles (讓 Fossil SCM 可以儲存 .git 中的版本資料).</p><br />Heroku 部署 << <a href='Heroku 部署.html'>Previous</a> <a href='建立網頁.html'>Next</a> >> 建立網頁</div>
+<p>接著在近端必須開啟空 cmstemplate.fossil 倉儲, 主要目的是取得 __FOSSIL__, 並且以 git pull 完整拉下位於 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 中的資料並與空 __FOSSIL__ 進行整合. 其中在 Fossil SCM 端必須將 Setup/Settings 中的 default-csp 設為: <a href="https://fonts.googleapis.com">https://fonts.googleapis.com</a> (讓 CMSiMDE 靜態網頁可以在 Fossil SCM doc 頁面中正常顯示), 且勾選 dotfiles (讓 Fossil SCM 可以儲存 .git 中的版本資料).</p>
+<p></p>
+<h4>參考資料:</h4>
+<p>編譯 Fossil SCM:</p>
+<p style="padding-left: 30px;"> <a href="http://project.mde.tw/blog/zai-msys2-huan-jing-bian-yi-fossil-scm.html">http://project.mde.tw/blog/zai-msys2-huan-jing-bian-yi-fossil-scm.html</a></p><br />Heroku 部署 << <a href='Heroku 部署.html'>Previous</a> <a href='建立網頁.html'>Next</a> >> 建立網頁</div>
         
     <!-- footer -->
       <div class="container">

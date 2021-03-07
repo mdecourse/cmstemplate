@@ -32,7 +32,11 @@ variables:
 <p>登入 fossil.kmol.info 主機, 在 /home/user/repository 目錄中, 以 fossil init cmstemplate.fossil 建立空倉儲. 此時 Fossil SCM 將會列出以登入帳號作為帳號的管理者密碼.</p>
 <p>管理者利用 <a href="https://fossil.kmol.info/cmstemplate">https://fossil.kmol.info/cmstemplate</a> 連結, 以 user 登入, 並利用上列管理者密碼進入管理區, 先行透過 Setup/users 變更 user 對應密碼.</p>
 <p>回到 Windows 以 <span style="background-color: #ffff99;">fossil clone https://user@fossil.kmol.info/cmstemplate cmstemplate.fossil</span> 取下倉儲資料, 過程中將需要輸入與 user 對應的密碼, 並被詢問是否儲存密碼, 若選擇儲存密碼則隨後的 fossil commit 將回自動提交推送.</p>
-<p>接著在近端必須開啟空 cmstemplate.fossil 倉儲, 主要目的是取得 __FOSSIL__, 並且以 git pull 完整拉下位於 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 中的資料並與空 __FOSSIL__ 進行整合. 其中在 Fossil SCM 端必須將 Setup/Settings 中的 default-csp 設為: <a href="https://fonts.googleapis.com">https://fonts.googleapis.com</a> (讓 CMSiMDE 靜態網頁可以在 Fossil SCM doc 頁面中正常顯示), 且勾選 dotfiles (讓 Fossil SCM 可以儲存 .git 中的版本資料).</p><h1>建立網頁</h1>
+<p>接著在近端必須開啟空 cmstemplate.fossil 倉儲, 主要目的是取得 __FOSSIL__, 並且以 git pull 完整拉下位於 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 中的資料並與空 __FOSSIL__ 進行整合. 其中在 Fossil SCM 端必須將 Setup/Settings 中的 default-csp 設為: <a href="https://fonts.googleapis.com">https://fonts.googleapis.com</a> (讓 CMSiMDE 靜態網頁可以在 Fossil SCM doc 頁面中正常顯示), 且勾選 dotfiles (讓 Fossil SCM 可以儲存 .git 中的版本資料).</p>
+<p></p>
+<h4>參考資料:</h4>
+<p>編譯 Fossil SCM:</p>
+<p style="padding-left: 30px;"> <a href="http://project.mde.tw/blog/zai-msys2-huan-jing-bian-yi-fossil-scm.html">http://project.mde.tw/blog/zai-msys2-huan-jing-bian-yi-fossil-scm.html</a></p><h1>建立網頁</h1>
 <p>由於 CMSiMDE 帶有動態網頁與靜態網頁等兩個部分, 動態網頁執行時需要該伺服器能夠執行 Python 3, 以及 flask flask_cors bs4 lxml pelican markdown 等模組. 而靜態網頁的伺服則只需要 WWW Server 即可.</p>
 <p>若使用者在 Github 使用 CMSiMDE 建立網頁, 可以透過 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> template 建立, 步驟與兩種設定方式如下:</p>
 <ol>
@@ -81,3 +85,19 @@ variables:
 <li>接著退回倉儲目錄, 以 git add, git commit 及 git push 將倉儲改版內容推向 Github 後應該就可以將倉儲正確轉為靜態網站內容.</li>
 </ol><h2>動態網站錯誤</h2>
 <p>CMSiMDE 動態網站經常出現的錯誤是無法對 config/content.htm 分頁, 這時可以利用 SCiTE 編輯 content.htm, 找尋是否 H1~H3 標註中是否帶有特殊符號, 如 "/" 或 ":" 等.</p>
+<h1>延伸開發</h1>
+<p>為了建立 responsive site:</p>
+<p>靜態網頁:</p>
+<p style="padding-left: 30px;">Javascript 程式庫:</p>
+<p style="padding-left: 60px;"><a href="https://getbootstrap.com/">https://getbootstrap.com/</a></p>
+<p>動態系統:</p>
+<p style="padding-left: 30px;">Javascript editor</p>
+<p style="padding-left: 60px;">TinyMCE: <a href="https://www.tiny.cloud/">https://www.tiny.cloud/</a></p>
+<p style="padding-left: 30px;">Syntax highlighter: <a href="https://prismjs.com/">https://prismjs.com/</a></p>
+<p style="padding-left: 30px;">Ajax bit by bit file uploader:</p>
+<p style="padding-left: 30px;">Flask</p>
+<p style="padding-left: 30px;">Flask_cors</p>
+<p style="padding-left: 30px;">bs4</p>
+<p style="padding-left: 30px;">lxml</p>
+<p style="padding-left: 30px;">markdown</p>
+<p></p>

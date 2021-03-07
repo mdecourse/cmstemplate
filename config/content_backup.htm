@@ -25,7 +25,7 @@
 variables:
   GIT_SUBMODULE_STRATEGY: recursive</pre>
 <p></p><h2>Heroku 部署</h2>
-<h2>Fossil SCM</h2>
+<p>與 Heroku 部署有關資訊請參考: <a href="https://mde.tw/cp2020/content/Heroku.html">https://mde.tw/cp2020/content/Heroku.html</a></p><h2>Fossil SCM</h2>
 <p>在 Github 之外, 可以同步將各倉儲資料存放至 Gitlab, Heroku (有 500 MB 容量限制) 與 Fossil SCM.</p>
 <p>希望整合 Github 與 Fossil SCM 倉儲步驟說明如下:</p>
 <p>針對 Github 中已經有 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 倉儲, 希望同步建 <a href="https://fossil.kmol.info/cmstemplate">https://fossil.kmol.info/cmstemplate</a> 與之內容同步.</p>
@@ -81,3 +81,19 @@ variables:
 <li>接著退回倉儲目錄, 以 git add, git commit 及 git push 將倉儲改版內容推向 Github 後應該就可以將倉儲正確轉為靜態網站內容.</li>
 </ol><h2>動態網站錯誤</h2>
 <p>CMSiMDE 動態網站經常出現的錯誤是無法對 config/content.htm 分頁, 這時可以利用 SCiTE 編輯 content.htm, 找尋是否 H1~H3 標註中是否帶有特殊符號, 如 "/" 或 ":" 等.</p>
+<h1>延伸開發</h1>
+<p>為了建立 responsive site:</p>
+<p>靜態網頁:</p>
+<p style="padding-left: 30px;">Javascript 程式庫:</p>
+<p style="padding-left: 60px;"><a href="https://getbootstrap.com/">https://getbootstrap.com/</a></p>
+<p>動態系統:</p>
+<p style="padding-left: 30px;">Javascript editor</p>
+<p style="padding-left: 60px;">TinyMCE: <a href="https://www.tiny.cloud/">https://www.tiny.cloud/</a></p>
+<p style="padding-left: 30px;">Syntax highlighter: <a href="https://prismjs.com/">https://prismjs.com/</a></p>
+<p style="padding-left: 30px;">Ajax bit by bit file uploader:</p>
+<p style="padding-left: 30px;">Flask</p>
+<p style="padding-left: 30px;">Flask_cors</p>
+<p style="padding-left: 30px;">bs4</p>
+<p style="padding-left: 30px;">lxml</p>
+<p style="padding-left: 30px;">markdown</p>
+<p></p>
