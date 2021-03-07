@@ -133,13 +133,14 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='CMSiMDE.html'>Next</a> >> CMSiMDE<br /><h1>About</h1>
-<p>Repository: <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a></p>
-<p>Github Pages: <a href="https://mde.tw/cmstemplate">https://mde.tw/cmstemplate</a></p>
-<p>目前的 cmsimde 在編輯器下方新增一個 csave 按鈕, 意即 collabrative save, 當動態網際管理系統在多人同時維護登入維護網頁內容時, 編輯各頁面時段, 該頁面可能已經改版, 因此使用 csave 按鈕存檔時, 會導入當下最新的該頁面內容, 並試圖與編輯中的頁面內容進行合併.</p>
-<p>使用 csave 按鈕存檔無法刪除頁面資料.</p>
-<p>使用 Edit All 模式, 無法使用 csave 按鈕（尚未測試).</p>
-<br /> <a href='CMSiMDE.html'>Next</a> >> CMSiMDE</div>
+    <div id="tipue_search_content">CMSiMDE << <a href='CMSiMDE.html'>Previous</a> <a href='注意事項.html'>Next</a> >> 注意事項<br /><h1>以CMSiMDE 建網頁</h1>
+<p>由於 CMSiMDE 帶有動態網頁與靜態網頁等兩個部分, 動態網頁執行時需要該伺服器能夠執行 Python 3, 以及 flask flask_cors bs4 lxml pelican markdown 等模組. 而靜態網頁的伺服則只需要 WWW Server 即可.</p>
+<p>若使用者在 Github 使用 CMSiMDE 建立網頁, 可以透過 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> template 建立, 步驟如下:</p>
+<p>使用者登入 Github</p>
+<p>將瀏覽器連線至 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 頁面後, 點擊 Use this template 按鈕後, 選擇所要採用的 repository 名稱後, 就可以建立以 CMSiMDE 作為子模組的 Github 倉儲.</p>
+<p>假如使用者所選擇的倉儲名稱為: 帳號.github.io, 則 Github 會自動設定該倉儲的 main 分支為 Github Pages 根目錄, 意即一旦 Github Pages 完成轉檔 (提交訊息之後會出現綠勾), 則該倉儲的對應網頁將為: https://帳號.github.io</p>
+<p>若使用利用 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 作為 template 所建立的倉儲名稱並非 帳號.github.io, 則使用者必須自行至該倉儲的 settings/Github Pages 選項中將 main branch 設為 Github Pages 對應的 root 目錄. 之後, Github 將會採用: 帳號.github.io/倉儲名稱 作為與該倉儲對應的 Github Pages 網址.</p>
+<br />CMSiMDE << <a href='CMSiMDE.html'>Previous</a> <a href='注意事項.html'>Next</a> >> 注意事項</div>
         
     <!-- footer -->
       <div class="container">
