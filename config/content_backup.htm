@@ -38,11 +38,20 @@
 <h1>標題選擇</h1>
 <p>由於 CMSiMDE 中的動態網站透過 config/content.htm 的 H1~H3 超文件標註進行分頁, 因此使用者利用 cms.bat 開啟動態網站後, 必須注意各頁面標題文字的選擇:</p>
 <ol>
-<li>頁面標題文字儘量簡短 - 頁面標題就有如文章的章節標題, 只要該標題具有該頁面內容的代表性即可, 越簡短越好.</li>
-<li>頁面標題文字不要使用標點符號 - 因為標點符號中的 "/" 會造成頁面擷取時 URL 指令分段上的誤判, 至於標題文字中若有 ":" 則會在動態內容轉靜態內容時, 因 Windows 不允許檔案名稱帶有 ":" 而無法轉檔.</li>
-<li>頁面標題中不可以有超文件標註 - 由於 CMSiMDE 動態網站編輯器採用 GUI 進行, 採用滑鼠標修頁面標題時, 可能無意中將 HTML 標註放入 H1~H3 標題文字中, 如此可能會造成 CMSiMDE 分頁錯誤而無法開啟動態網站.</li>
-<li>H1 標題數量不可過多 - 由於 CMSiMDE 的靜態網站支援手機模式, 當頁面 H1 標題數量超過 10 個之後, 頁面標題可能無法在螢幕上最上方以一列顯示, 而是必須出現在第二行, 結果將會導致頁面展開時的 Javascript 程式產生錯亂, 結果為無法直接以滑鼠點擊進入特定頁面.</li>
+<li><span style="background-color: #ffff99;">頁面標題文字儘量簡短</span> - 頁面標題就有如文章的章節標題, 只要該標題具有該頁面內容的代表性即可, 越簡短越好.</li>
+<li><span style="background-color: #ffff99;">頁面標題文字不要使用標點符號</span> - 因為標點符號中的 "/" 會造成頁面擷取時 URL 指令分段上的誤判, 至於標題文字中若有 ":" 則會在動態內容轉靜態內容時, 因 Windows 不允許檔案名稱帶有 ":" 而無法轉檔.</li>
+<li><span style="background-color: #ffff99;">頁面標題中不可以有超文件標註</span> - 由於 CMSiMDE 動態網站編輯器採用 GUI 進行, 採用滑鼠標修頁面標題時, 可能無意中將 HTML 標註放入 H1~H3 標題文字中, 如此可能會造成 CMSiMDE 分頁錯誤而無法開啟動態網站. 當使用者要檢查所使用的頁面標題是否帶有 html 標註, 可以透過編輯功能中的 Source Code 檢查.</li>
+<li><span style="background-color: #ffff99;">H1 標題數量不可過多</span> - 由於 CMSiMDE 的靜態網站支援手機模式, 當頁面 H1 標題數量超過 10 個之後, 頁面標題可能無法在螢幕上最上方以一列顯示, 而是必須出現在第二行, 結果將會導致頁面展開時的 Javascript 程式產生錯亂, 結果為無法直接以滑鼠點擊進入特定頁面.</li>
 </ol>
+<h1>Fossil SCM</h1>
+<p>在 Github 之外, 可以同步將各倉儲資料存放至 Gitlab, Heroku (有 500 MB 容量限制) 與 Fossil SCM.</p>
+<p>希望整合 Github 與 Fossil SCM 倉儲步驟說明如下:</p>
+<p>針對 Github 中已經有 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 倉儲, 希望同步建 <a href="https://fossil.kmol.info/cmstemplate">https://fossil.kmol.info/cmstemplate</a> 與之內容同步.</p>
+<p>登入 fossil.kmol.info 主機, 在 /home/user/repository 目錄中, 以 fossil init cmstemplate.fossil 建立空倉儲. 此時 Fossil SCM 將會列出以登入帳號作為帳號的管理者密碼.</p>
+<p>管理者利用 <a href="https://fossil.kmol.info/cmstemplate">https://fossil.kmol.info/cmstemplate</a> 連結, 以 user 登入, 並利用上列管理者密碼進入管理區, 先行透過 Setup/users 變更 user 對應密碼.</p>
+<p>回到 Windows 以 <span style="background-color: #ffff99;">fossil clone https://user@fossil.kmol.info/cmstemplate cmstemplate.fossil</span> 取下倉儲資料, 過程中將需要輸入與 user 對應的密碼, 並被詢問是否儲存密碼, 若選擇儲存密碼則隨後的 fossil commit 將回自動提交推送.</p>
+<p>接著在近端必須開啟空 cmstemplate.fossil 倉儲, 主要目的是取得 __FOSSIL__, 並且以 git pull 完整拉下位於 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 中的資料並與空 __FOSSIL__ 進行整合.</p>
+<p></p>
 <p></p>
 <p></p>
 <p></p>
