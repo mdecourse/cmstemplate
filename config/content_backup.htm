@@ -89,8 +89,10 @@ main() {
 <h3>檢視 STL</h3>
 <p>使用 Github 所提供的 STL viewer 嵌入 github.com/mdecourse/cmstemplate main branch 中 downloads 目錄中的 spikeball.stl</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;script src="https://embed.github.com/view/3d/mdecourse/cmstemplate/main/downloads/spikeball.stl"&gt;&lt;/script&gt;</pre>
+<p>將上列 script 標註放入頁面 HTML 內容後, 可以檢視 STL 零件檔案.</p>
 <p></p>
-<script src="https://embed.github.com/view/3d/mdecourse/cmstemplate/main/downloads/spikeball.stl"></script><h2>Gitlab 同步</h2>
+<script src="https://embed.github.com/view/3d/mdecourse/cmstemplate/main/downloads/spikeball.stl"></script>
+<p>以 static/viewstl.html <iframe height="400" src="/static/viewstl.html?src=/downloads/spikeball.stl" width="600"></iframe></p><h2>Gitlab 同步</h2>
 <p>利用 git remote add gitlab <a href="https://gitlab.com/user/repository.git">https://gitlab.com/user/repository.git</a> 可以在近端倉儲中的 .git/config 中新增一個名稱為 gitlab, 且與 <a href="https://gitlab.com/user/repository.git">https://gitlab.com/user/repository.git</a> 倉儲對應的設定. 使用者可以將此倉儲改版內容以 git push gitlab 推向 Gitlab.</p>
 <p>至於 Gitlab Pages 額外需要下列 .yml 檔案進行轉換設定:</p>
 <p>.gitlab-ci.yml</p>
