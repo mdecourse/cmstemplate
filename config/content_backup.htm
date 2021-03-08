@@ -27,11 +27,16 @@
 <p>編輯 CMSiMDE 動態網站中的內容, 可以透過表單中的 <span style="background-color: #ffff99;">Edit All</span> 或 <span style="background-color: #ffff99;">Edit</span> 按鈕進行. <span style="background-color: #ffff99;">Edit</span> 可用於單頁編輯, 操作時先選擇左側的頁面標題, 等系統顯示該頁面內容後, 再點擊上方的 <span style="background-color: #ffff99;">Edit</span> 按鈕即可進入該頁面的編輯模式.</p>
 <p><span style="background-color: #ffff99;">Edit All</span> 通常用於單次刪除所有頁面內容或者只保留特定頁面用, 點擊後會將所有頁面內容置於編輯器中.</p>
 <h3>上傳與引用檔案</h3>
-<p>File Upload 可以讓使用者選擇近端多個檔案上傳至動態系統中的 downloads 目錄.</p>
-<p>引用使用者上傳的檔案</p><h3>上傳與引用圖片</h3>
+<p><span style="background-color: #000000; color: #ffffff;">File Upload</span> 可以讓使用者選擇近端多個檔案上傳至動態系統中的 downloads 目錄.</p>
+<p>引用使用者上傳的檔案</p>
+<p style="padding-left: 30px;"><a href="/downloads/python_book_01.pdf">python_book_01.pdf</a></p><h3>上傳與引用圖片</h3>
 <p><span style="background-color: #000000; color: #ffffff;">Image Upload</span> 可以讓使用者選擇近端多個檔案上傳至動態系統中的 downloads 目錄.</p>
-<p>引用使用者上傳的檔案</p><h3>嵌入程式碼</h3>
-<h3>嵌入影片檔</h3><h2>Gitlab 同步</h2>
+<p>引用使用者上傳的檔案</p>
+<p style="padding-left: 30px;"><img caption="false" class="add_border" height="227" src="/images/nfu_logo_mde.png" width="200"/></p>
+<p style="padding-left: 30px;"></p><h3>嵌入程式碼</h3>
+<h3>嵌入影片檔</h3>
+<p>直接利用 Source code 功能, 將影片檔案的 iframe 標註放入後存檔:</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/bZupkkT4T5c" width="560"></iframe></p><h2>Gitlab 同步</h2>
 <p>利用 git remote add gitlab <a href="https://gitlab.com/user/repository.git">https://gitlab.com/user/repository.git</a> 可以在近端倉儲中的 .git/config 中新增一個名稱為 gitlab, 且與 <a href="https://gitlab.com/user/repository.git">https://gitlab.com/user/repository.git</a> 倉儲對應的設定. 使用者可以將此倉儲改版內容以 git push gitlab 推向 Gitlab.</p>
 <p>至於 Gitlab Pages 額外需要下列 .yml 檔案進行轉換設定:</p>
 <p>.gitlab-ci.yml</p>
