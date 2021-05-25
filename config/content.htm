@@ -19,10 +19,43 @@
 <li><span style="background-color: #ffff99;">http-server.py</span> - 執行後會使用內建的 localhost 與 port 8444 伺服 content 子目錄中的 CMSiMDE 靜態網頁.</li>
 <li><span style="background-color: #ffff99;">cms.bat</span> - 讓使用者執行動態網站用的批次檔案.</li>
 <li><span style="background-color: #ffff99;">acp.bat</span> - 若使用者已經將倉儲設為 ssh 連線, 且提供遠端與近端的認證模式, 則可以在執行此批次指令之後加上提交字串, 即可執行 git add ., git commit -m "提交訊息", 以及 git push 等三個指令.</li>
-</ol><h1>CMSiMDE</h1>
+</ol><h1>可攜系統</h1>
+<p><a href="https://drive.google.com/file/d/1hTvN4mCk2b_enIK204HA0AVPsd3GPlh5/view?usp=sharing">portablekmol_base.7z</a> (下載 118MB, 解開壓縮後 148MB)</p>
+<p style="padding-left: 30px;">包括 data 目錄與 start_ipv6.bat, start_ipv4.bat, stop.bat</p>
+<p style="padding-left: 30px;">功能: 啟動後可以啟動 SciTE 編輯器, 可用於類解譯 ANSI C 程式, 以及 <a href="https://solvespace.com">Solvespace</a>.</p>
+<p><a href="https://drive.google.com/file/d/1BGfN5R6Yw1e9Unm4u8GCRP4xcSuYfCSE/view?usp=sharing">Python395.7z</a> (下載 123MB, 解開壓縮後 495MB)</p>
+<p style="padding-left: 30px;">功能: 與 <a href="https://drive.google.com/file/d/1hTvN4mCk2b_enIK204HA0AVPsd3GPlh5/view?usp=sharing">portablekmol_base.7z</a> 結合後, 可以利用 SciTE 編輯器執行 Python 程式.</p>
+<p><a href="https://drive.google.com/file/d/1RW51wCJ056TdWvjharBKOl6FM9iewpHI/view?usp=sharing">portablegit_2.31.1.7z</a> (下載 60MB, 解開壓縮後 286MB)</p>
+<p style="padding-left: 30px;">功能: 與 <a href="https://drive.google.com/file/d/1hTvN4mCk2b_enIK204HA0AVPsd3GPlh5/view?usp=sharing">portablekmol_base.7z</a> 結合後, 可以利用可攜程式系統的命令列視窗執行 git 指令.</p>
+<p><a href="https://drive.google.com/file/d/1JDmc_b4BLwGh4hQ7Tatq02EXmiPLrNZV/view?usp=sharing">lua-5.4.3.7z</a> (下載 662KB, 解開壓縮後 4MB)</p>
+<p style="padding-left: 30px;">功能: 與 <a href="https://drive.google.com/file/d/1hTvN4mCk2b_enIK204HA0AVPsd3GPlh5/view?usp=sharing">portablekmol_base.7z</a> 結合後, 可以利用 SciTE 編輯器執行 Lua 程式.</p>
+<p><a href="https://drive.google.com/file/d/1u-Efwoizvqn9WJdcL0fez7a2d0ulGBcs/view?usp=sharing">PUTTY.7z</a> (下載 940KB, 解開壓縮後 4MB)</p>
+<p style="padding-left: 30px;">功能: plink.exe 可以與 git 結合, 利用 Putty.exe 中所設定的 session 名稱進行 SSH 連線.</p>
+<p><a href="https://drive.google.com/file/d/1m6cmWu9AZhkBj6wFn9IiJlShcpGbz05g/view?usp=sharing">msys64_20210419.7z</a> (下載 3.5GB, 解開壓縮後 12GB)</p>
+<p style="padding-left: 30px;">功能: <a href="https://www.msys2.org/">Msys2</a> 安裝</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">pacman -S mingw-w64-x86_64-toolchain
+pacman -Sy mingw-w64-x86_64-qt5
+pacman -Sy mingw-w64-x86_64-qt5-static
+pacman -Sy mingw-w64-x86_64-ffmpeg
+pacman -Sy mingw-w64-x86-64-cmake</pre>
+<p><a href="https://drive.google.com/file/d/17M7Ro9NO2mmycvwOuK-10yYgs2oxFwEB/view?usp=sharing">msys64_20210419_clean.7z</a> (下載 87MB , 解開壓縮後 374MB)</p>
+<p style="padding-left: 30px;">功能: 尚未安裝任何 Package 的 <a href="https://www.msys2.org/">Msys2</a> 系統.</p>
+<p><a href="https://drive.google.com/file/d/1BIDn3pn-qQRF0L7rZMNbh43HXyFLhiPj/view?usp=sharing">CoppeliaSimEdu_4.1.0_rev1.7z</a> (下載 183MB, 解開壓縮後 438MB)</p>
+<p style="padding-left: 30px;">功能: 可免費提供大學機電資整合課程使用, 且開放原始碼, 可用於機電資控制系統設計與模擬 (InfoMechaTronic control system design and simulation).</p>
+<p><a href="https://drive.google.com/file/d/1ih24k0G-vKnB1OjOIxHV4Gyz-bmlxeCU/view?usp=sharing">robodk_522.7z</a> (下載 364MB, 解開壓縮後 1GB)</p>
+<p style="padding-left: 30px;">功能: 提供限縮功能版本 Free Trial, 只可模擬但無法存檔, 可用於工業級機械手臂在線與離線控制系統設計與模擬.</p>
+<p><a href="https://drive.google.com/file/d/1uDJCaxDsed_5ZTdsHNOfGQ51JnT3aNP0/view?usp=sharing">Range3.7z</a> (下載 27MB, 解開壓縮後 109MB)</p>
+<p style="padding-left: 30px;">功能: 開放源 FEM (Finite Element Method) 分析套件.</p>
+<p><a href="https://drive.google.com/file/d/1ITHNrhemifHloS_x3BAchyQxMUKma0AI/view?usp=sharing">webots-R2021a.7z</a> (下載 1.5GB, 解開壓所後 2.9GB)</p>
+<p style="padding-left: 30px;">功能: 採 Apache 2.0 使用授權的開放源套件, 可用於機電資控制系統設計與模擬.</p><h2>Lua 解譯</h2>
+<p>SciTE 編輯器中的 Lua.properties 設定:</p>
+<p>選擇利用 y:\lua-5.4.3\luac 與 lua 編譯或解譯 .lua 程式檔案.</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">command.compile.*.lua=y:\lua-5.4.3\luac -o "$(FileName).luc" "$(FileNameExt)"
+# Lua 5.1
+command.go.*.lua=y:\lua-5.4.3\lua "$(FileNameExt)"</pre>
+<p></p><h1>CMSiMDE</h1>
 <p>CMSiMDE (<a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a>) 是一套以 Python 與 Flask 框架編寫的網際內容管理系統,</p>
-<p>使用 CMSiMDE 建議使用者安裝 flask flask_cors bs4 lxml pelican markdown leo 等模組. 其中的 flask flask_cors bs4 lxml pelican markdown為啟動 CMSiMDE 的必要模組, 而 leo 則是 CMSMDE 開發者所使用的大綱管理工具, 可以用於與 CMSiMDE 整合的 Pelican blog 及 Reveal.js 網際簡報編輯之用.</p>
-<h2>基本操作</h2>
+<p>使用 CMSiMDE 建議使用者安裝 flask flask_cors bs4 lxml pelican markdown leo 等模組. 其中的 flask flask_cors bs4 lxml pelican markdown為啟動 CMSiMDE 的必要模組, 而 leo 則是 CMSMDE 開發者所使用的大綱管理工具, 可以用於與 CMSiMDE 整合的 Pelican blog 及 Reveal.js 網際簡報編輯之用.</p><h2>基本操作</h2>
 <p>當使用者利用 cms.bat 啟用動態網站後, 即可利用瀏覽器 <a>https://localhost:9443</a> 在近端維護網站內容, 由於此時動態網站僅在 localhost 啟動, 因此可以使用內建的管理者密碼 "admin" 登入管理網站內容.</p>
 <p>假如使用者修改 init.py 中的 ip 或 uwsgi 設定, 讓動態網站在外部 IP 啟動, 則必須自行透過動態網站中的 <span style="background-color: #ffff99;">config</span> 指令修改管理者密碼.</p>
 <p>動態網站編輯表單中的 <span style="background-color: #ffff99;">config</span> 除了可更改網站管理者密碼外, 也可以更改網站的頁面內容標題 (外部標題可以透過 init.py 中的 site_title 更改).</p>
