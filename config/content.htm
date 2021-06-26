@@ -56,6 +56,10 @@ pacman -Sy mingw-w64-x86-64-cmake</pre>
 # Lua 5.1
 command.go.*.lua=y:\lua-5.4.3\lua "$(FileNameExt)"</pre>
 <p></p><h1>CMSiMDE</h1>
+<p>注意: 由於 CMSiMDE 近端啟動時之 ssl_context 改用 adhoc, 因此 Python 必須安裝 pyopenssl:</p>
+<p style="padding-left: 30px;">pip install pyopenssl</p>
+<p style="padding-left: 30px;">若是在 Linux 則使用 sudo pip3 install pyopenssl</p>
+<p style="padding-left: 30px;">若是在 Mac 則使用 pip3 install pyopenssl</p>
 <p>CMSiMDE (<a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a>) 是一套以 Python 與 Flask 框架編寫的網際內容管理系統,</p>
 <p>使用 CMSiMDE 建議使用者安裝 flask flask_cors bs4 lxml pelican markdown leo 等模組. 其中的 flask flask_cors bs4 lxml pelican markdown為啟動 CMSiMDE 的必要模組, 而 leo 則是 CMSMDE 開發者所使用的大綱管理工具, 可以用於與 CMSiMDE 整合的 Pelican blog 及 Reveal.js 網際簡報編輯之用.</p><h2>建立網頁</h2>
 <p>由於 CMSiMDE 帶有動態網頁與靜態網頁等兩個部分, 動態網頁執行時需要該伺服器能夠執行 Python 3, 以及 flask flask_cors bs4 lxml pelican markdown 等模組. 而靜態網頁的伺服則只需要 WWW Server 即可.</p>
