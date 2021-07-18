@@ -49,6 +49,9 @@ pacman -Sy mingw-w64-x86-64-cmake</pre>
 <p><a href="https://drive.google.com/file/d/1CZfEjvHtQSlAch83jHmw4Ivz6WubPu8h/view?usp=sharing">Erlang 10.7 and Elixir portable.7z</a> for Windows (下載 62MB , 解開壓縮後 340MB)</p>
 <p>Deno 1.11.5: <a href="https://github.com/denoland/deno/releases/">https://github.com/denoland/deno/releases/</a> 直接下載 Windows 版本解開壓縮後 55MB, 放入可攜系統 data 目錄中即可執行.</p>
 <p><a href="https://drive.google.com/file/d/1BIDn3pn-qQRF0L7rZMNbh43HXyFLhiPj/view?usp=sharing">CoppeliaSimEdu_4.1.0_rev1.7z</a> (下載 183MB, 解開壓縮後 438MB)</p>
+<p><a href="https://drive.google.com/file/d/1a9onsFJavy_eXDyzpLJIIVTxEhgAdRYV/view?usp=sharing">CoppeliaSimEdu 4.0.0.7z</a> for Windows 64 位元操作系統(下載 134MB, 解開壓縮後 337MB)</p>
+<p><a href="https://drive.google.com/file/d/1nF63ZLxueDlRjWdzXxTg13Pc5MjeCecs/view?usp=sharing">CoppeliaSimEdu 4.0.0.zip</a> for Mac</p>
+<p><a href="https://drive.google.com/file/d/1iXtPtMOxH6-k7UiYrOS9BYRU4muJi_KM/view?usp=sharing">CoppeliaSimEdu 4.0.0.tar.xz</a> for Ubuntu</p>
 <p style="padding-left: 30px;">功能: 可免費提供大學機電資整合課程使用, 且開放原始碼, 可用於機電資控制系統設計與模擬 (InfoMechaTronic control system design and simulation).</p>
 <p><a href="https://drive.google.com/file/d/1ih24k0G-vKnB1OjOIxHV4Gyz-bmlxeCU/view?usp=sharing">robodk_522.7z</a> (下載 364MB, 解開壓縮後 1GB)</p>
 <p style="padding-left: 30px;">功能: 提供限縮功能版本 Free Trial, 只可模擬但無法存檔, 可用於工業級機械手臂在線與離線控制系統設計與模擬.</p>
@@ -236,7 +239,7 @@ variables:
 <p></p>
 <p></p>
 <h2>靜態網頁 404</h2>
-<p>當使用者將近端網頁倉儲資料推向 Github 後, commit 提交訊息之後若沒有出現綠勾, 表示靜態網頁無法轉檔成功, 這時連接靜態網頁時, 將會出現 404, 通常情況下是因為倉儲中 cmsimde 子模組的版次無法與遠端 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 中的版本對應, 而造成此問題的原因通常是因為使用者直接在倉儲的 cmsimde 子模組目錄中進行不當的 git add 與 commit, 因為使用者並沒有對子模組改版的權限, 但是一但對 cmsimde 子模組 git add 與 commit 之後, git 就會將 cmsimde 的 HEAD 對應到一個新的 cmsimde 版次號, 但此版次號並沒 cmsimde 子模組 official 版號, 因此若在此失去對 cmsimde 子模組的正確對應下, 即便回到倉儲根目錄完成新增提交與推送, Github 將會因為無法找到正確對應的 cmsimde 版次而無法完成靜態網頁的轉檔.</p>
+<p>當使用者將近端網頁倉儲資料推向 Github 後, commit 提交訊息之後若沒有出現綠勾, 表示靜態網頁無法轉檔成功, 這時連接靜態網頁時, 將會出現 404, 通常情況下是因為倉儲中 cmsimde 子模組的版次無法與遠端 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 中的版本對應, 而造成此問題的原因, 通常是因為使用者直接在倉儲的 cmsimde 子模組目錄中進行不當的 git add 與 commit, 因為使用者並沒有對子模組改版的權限, 一旦對 cmsimde 子模組 git add 與 commit 之後, git 就會將 cmsimde 的 HEAD 對應到一個新的 cmsimde 版次號, 但此版次號並不是 cmsimde 子模組 official 的版次, 因此若在此時失去對 cmsimde 子模組的正確對應下, 回到倉儲根目錄完成新增提交與推送, Github 將會因為無法找到正確對應的 cmsimde 版次而無法完成靜態網頁的轉檔.</p>
 <p>上述靜態網頁出現 404 錯誤訊息的處理方式如下:</p>
 <ol>
 <li>從 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 倉儲中複製最新版本的版次號, 以 <a href="https://github.com/mdecourse/cmsimde/commit/1c3aeec1f5d26b421743d2f5ef8bb7d5b99292af">2021/03/03 的版次</a>為例, 版次號為 1c3aeec1f5d26b421743d2f5ef8bb7d5b99292af, 使用者只需要最前面的 7 個字元, 也就是 1c3aeec.</li>
