@@ -480,7 +480,7 @@ var winkVideoData2 = {
   },
 };
 </script>
-<div class="winkVideoContainerClass"><video class="winkVideoClass" data-dirname="/static" data-varname="winkVideoData2" height="600" width="800">
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" data-dirname="/static" data-varname="winkVideoData2" height="600" loop="loop" muted="" playsinline="" width="800">
 <source src="/downloads/wink_tutorial2.mp4" type="video/mp4"/></video>
 <div class="winkVideoOverlayClass"></div>
 <div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
@@ -491,7 +491,13 @@ var winkVideoData2 = {
 <div class="winkVideoControlBarProgressThumbClass"></div>
 </div>
 <div class="winkVideoPlayOverlayClass"></div>
-</div><h1>CMSiMDE</h1>
+</div>
+<h2>Add Wink</h2>
+<p>由於 Wink 所建立的 mp4 影片檔案必須透過 Javascript 與 css 的設定才能具備所有功能, 在 CMSiMDE 頁面新增 Wink mp4 影片時必須直接編輯 html, 除了導入與 mp4 檔案對應的 Javascript 外, HTML5 Videl 必須加以修正才能在手機與平板上的瀏覽器播放影片.</p>
+<p>以下為相關插入範例語法:</p>
+<p><img caption="false" class="add_border" height="221" src="/images/wink_for_cmsimde1.png" width="400"/></p>
+<p><img alt="" class="add_border" height="222" src="/images/wink_for_cmsimd2.png" width="400"/></p>
+<p></p><h1>CMSiMDE</h1>
 <p>注意: 由於 CMSiMDE 近端啟動時之 ssl_context 改用 adhoc, 因此 Python 必須安裝 pyopenssl:</p>
 <p style="padding-left: 30px;">pip install pyopenssl</p>
 <p style="padding-left: 30px;">若是在 Linux 則使用 sudo pip3 install pyopenssl</p>
