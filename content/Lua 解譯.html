@@ -35,6 +35,9 @@
         <script src="tipuesearch_content.js"></script>
         <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
         <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 -->
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
         <script>
             /* original tipuesearch
             $(document).ready(function() {
@@ -62,6 +65,7 @@
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
@@ -124,7 +128,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='可攜系統.html'>可攜系統</a><ul class='dropdown'><li><a href='Lua 解譯.html'>Lua 解譯</a></li></ul><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li><a href='建立網頁.html'>建立網頁</a><li class='has-children'><a href='基本操作.html'>基本操作</a><ul class='dropdown'><li><a href='客製化.html'>客製化</a><li><a href='編輯網頁內容.html'>編輯網頁內容</a><li><a href='上傳與引用檔案.html'>上傳與引用檔案</a><li><a href='上傳與引用圖片.html'>上傳與引用圖片</a><li><a href='嵌入程式碼.html'>嵌入程式碼</a><li><a href='嵌入影片檔.html'>嵌入影片檔</a><li><a href='檢視 STL.html'>檢視 STL</a></li></ul><li><a href='Gitlab 同步.html'>Gitlab 同步</a><li><a href='Heroku 部署.html'>Heroku 部署</a><li><a href='Fossil SCM.html'>Fossil SCM</a></li></ul><li class='has-children'><a href='注意事項.html'>注意事項</a><ul class='dropdown'><li><a href='標題選擇.html'>標題選擇</a><li><a href='靜態網頁 404.html'>靜態網頁 404</a><li><a href='動態網站錯誤.html'>動態網站錯誤</a></li></ul><li class='has-children'><a href='延伸開發.html'>延伸開發</a><ul class='dropdown'><li class='has-children'><a href='已知問題.html'>已知問題</a><ul class='dropdown'><li><a href='IPv6.html'>IPv6</a><li><a href='MathJax.html'>MathJax</a><li><a href='html 分頁.html'>html 分頁</a><li><a href='template.html'>template</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='可攜系統.html'>可攜系統</a><ul class='dropdown'><li><a href='Lua 解譯.html'>Lua 解譯</a></li></ul><li><a href='Wink.html'>Wink</a><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li><a href='建立網頁.html'>建立網頁</a><li class='has-children'><a href='基本操作.html'>基本操作</a><ul class='dropdown'><li><a href='客製化.html'>客製化</a><li><a href='編輯網頁內容.html'>編輯網頁內容</a><li><a href='上傳與引用檔案.html'>上傳與引用檔案</a><li><a href='上傳與引用圖片.html'>上傳與引用圖片</a><li><a href='嵌入程式碼.html'>嵌入程式碼</a><li><a href='嵌入影片檔.html'>嵌入影片檔</a><li><a href='檢視 STL.html'>檢視 STL</a></li></ul><li><a href='Gitlab 同步.html'>Gitlab 同步</a><li><a href='Heroku 部署.html'>Heroku 部署</a><li><a href='Fossil SCM.html'>Fossil SCM</a></li></ul><li class='has-children'><a href='注意事項.html'>注意事項</a><ul class='dropdown'><li><a href='標題選擇.html'>標題選擇</a><li><a href='靜態網頁 404.html'>靜態網頁 404</a><li><a href='動態網站錯誤.html'>動態網站錯誤</a></li></ul><li class='has-children'><a href='延伸開發.html'>延伸開發</a><ul class='dropdown'><li class='has-children'><a href='已知問題.html'>已知問題</a><ul class='dropdown'><li><a href='IPv6.html'>IPv6</a><li><a href='MathJax.html'>MathJax</a><li><a href='html 分頁.html'>html 分頁</a><li><a href='template.html'>template</a></li>
                       </ul>
                 </nav>
               </div>
@@ -135,14 +139,19 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">可攜系統 << <a href='可攜系統.html'>Previous</a> <a href='CMSiMDE.html'>Next</a> >> CMSiMDE<br /><h1>Lua 解譯</h1>
-<p>網際 Lua 解譯系統: <a href="http://mde.tw/lab/downloads/lua/index.html">http://mde.tw/lab/downloads/lua/index.html</a></p>
-<p>SciTE 編輯器中的 Lua.properties 設定:</p>
-<p>選擇利用 y:\lua-5.4.3\luac 與 lua 編譯或解譯 .lua 程式檔案.</p>
+    <div id="tipue_search_content">可攜系統 << <a href='可攜系統.html'>Previous</a> <a href='Wink.html'>Next</a> >> Wink<br /><h1>Lua 解譯</h1>
+<h4>利用 Msys2 編譯 Lua 原始碼:</h4>
+<p style="padding-left: 30px;">從 <a href="https://www.lua.org/">https://www.lua.org/</a> 下載 5.4.3 原始碼解開壓縮檔案後, cd 進原始碼目錄後執行:</p>
+<p style="padding-left: 30px;">mingw32-make mingw</p>
+<p style="padding-left: 30px;">即可在 src 目錄中取得 luac.exe, liblua.a, lua.exe, lua54.dll 等檔案.</p>
+<p>套用 <a href="https://github.com/fengari-lua/fengari-web">https://github.com/fengari-lua/fengari-web</a> 可以建立網際 Lua 解譯系統:</p>
+<p style="padding-left: 30px;"><a href="http://mde.tw/lab/downloads/lua/index.html">http://mde.tw/lab/downloads/lua/index.html</a></p>
+<p>若希望在 SciTE 編輯器中解譯 .lua 程式, 則必須修改 Lua.properties 設定:</p>
+<p>選擇利用 y:\lua-5.4.3\luac.exe 與 lua.exe 編譯或解譯 .lua 程式檔案.</p>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">command.compile.*.lua=y:\lua-5.4.3\luac -o "$(FileName).luc" "$(FileNameExt)"
 # Lua 5.1
 command.go.*.lua=y:\lua-5.4.3\lua "$(FileNameExt)"</pre>
-<p></p><br />可攜系統 << <a href='可攜系統.html'>Previous</a> <a href='CMSiMDE.html'>Next</a> >> CMSiMDE</div>
+<p></p><br />可攜系統 << <a href='可攜系統.html'>Previous</a> <a href='Wink.html'>Next</a> >> Wink</div>
         
     <!-- footer -->
       <div class="container">
