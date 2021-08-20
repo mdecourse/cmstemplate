@@ -243,7 +243,7 @@ var winkVideoData1 = {
   },
 };
 </script>
-<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" data-dirname="/static" data-varname="winkVideoData1" height="600" loop="loop" muted="" playsinline="" width="800">
+<div class="winkVideoContainerClass"><video class="winkVideoClass" data-dirname="/static" data-varname="winkVideoData1" height="600" muted="" playsinline="" width="800">
 <source src="/downloads/wink_tutorial1.mp4" type="video/mp4"/></video>
 <div class="winkVideoOverlayClass"></div>
 <div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
@@ -491,8 +491,7 @@ var winkVideoData2 = {
 <div class="winkVideoControlBarProgressThumbClass"></div>
 </div>
 <div class="winkVideoPlayOverlayClass"></div>
-</div>
-<h2>Add Wink</h2>
+</div><h2>Add Wink</h2>
 <p>由於 Wink 所建立的 mp4 影片檔案必須透過 Javascript 與 css 的設定才能具備所有功能, 在 CMSiMDE 頁面新增 Wink mp4 影片時必須直接編輯 html, 除了導入與 mp4 檔案對應的 Javascript 外, HTML5 Videl 必須加以修正才能在手機與平板上的瀏覽器播放影片.</p>
 <p>以下為相關插入範例語法:</p>
 <p><img caption="false" class="add_border" height="221" src="/images/wink_for_cmsimde1.png" width="400"/></p>
@@ -725,12 +724,15 @@ variables:
 <p style="padding-left: 30px;"><a href="https://github.com/slembcke/Chipmunk2D">https://github.com/slembcke/Chipmunk2D</a></p>
 <p style="padding-left: 60px;"><a href="http://www.pymunk.org/en/latest/">http://www.pymunk.org/en/latest/</a></p>
 <p style="padding-left: 30px;"><a href="https://github.com/mrjleo/python-physics-demos">https://github.com/mrjleo/python-physics-demos</a></p>
-<p style="padding-left: 30px;">cango3d library: <a href="https://www.arc.id.au/Canvas3DGraphics.html">https://www.arc.id.au/Canvas3DGraphics.html</a></p><h3>IPv6</h3>
-<p>參考: <a href="https://github.com/tinymce/tinymce/issues/4409">https://github.com/tinymce/tinymce/issues/4409</a> 中的 <a href="https://github.com/tinymce/tinymce/issues/4409#issuecomment-680282550">url parsing 修改</a>後, 目前已經可以在 local 與 IPv6 網路連線中啟用 tinymce4 editor.</p>
+<p style="padding-left: 30px;">cango3d library: <a href="https://www.arc.id.au/Canvas3DGraphics.html">https://www.arc.id.au/Canvas3DGraphics.html</a></p><h3>編輯區存擋</h3>
+<p>在某些情況下, 例如: 使用者修改 Insert/Edit Code 中的程式內容, 編輯區的 Save 卻無法察覺, 使用者在更改此類內容後, 必須自行點擊編輯區下方的 Save 按鍵存檔.</p>
+<h3>IPv6</h3>
+<p>參考: <a href="https://github.com/tinymce/tinymce/issues/4409">https://github.com/tinymce/tinymce/issues/4409</a> 中的 <a href="https://github.com/tinymce/tinymce/issues/4409#issuecomment-680282550">url parsing 修改</a>後, 目前已經可以在 local 與 IPv6 網路連線中啟用 tinymce4 editor.</p><h3>上傳資料引用</h3>
+<p>針對有特殊符號的上傳檔案名稱, 例如: Non-Programmer's_Tutorial_for_Python_3.pdf, 目前的 insert/edit link 編輯無法正確將此帶有 "'" 的檔案引入 anchor 標註.</p>
+<p>上傳檔案區的 keyword 查詢目前無法使用, 且上傳檔案的排序在不同操作系統中會產生不同順序排列.</p>
 <h3>MathJax</h3>
 <p>MathJax 引用問題:</p>
-<p style="padding-left: 30px;"><a href="https://www.mathjax.org/">https://www.mathjax.org/</a></p>
-<h3>html 分頁</h3>
+<p style="padding-left: 30px;"><a href="https://www.mathjax.org/">https://www.mathjax.org/</a></p><h3>html 分頁</h3>
 <p>分頁失敗時會意外抹除 config\content.htm 中的所有內容</p>
 <p>分頁失敗並不會提供 debug 建議</p>
 <h3>template</h3>
