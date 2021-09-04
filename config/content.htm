@@ -513,22 +513,24 @@ var winkVideoData2 = {
 <p>其中的 data-dirname 屬性在動態網頁時必須設定為 /static, 而每一個 mp4 影片都必須有不同的 data-varname 屬性名稱, 以上一頁有兩個 Wink mp4 影片並列時, 第一個影片的 data-varname 為 winkVideoData1, 而第二部的 data-varname 則設為 winkVideoData2.</p>
 <p>至於 winkVideoData 變數的內容則取自 Wink 專案轉檔後與 .htm 超文件檔案同一目錄下的 Javascript 檔案.</p>
 <p></p><h1>CMSiMDE</h1>
-<p>注意: 由於 CMSiMDE 近端啟動時之 ssl_context 改用 adhoc, 因此 Python 必須安裝 pyopenssl:</p>
+<p>注意: 由於 CMSiMDE 近端啟動時之 ssl_context 改用 adhoc, 因此 Python 必須額外安裝 pyopenssl:</p>
 <p style="padding-left: 30px;">pip install pyopenssl</p>
 <p style="padding-left: 30px;">若是在 Linux 則使用 sudo pip3 install pyopenssl</p>
 <p style="padding-left: 30px;">若是在 Mac 則使用 pip3 install pyopenssl</p>
 <p>CMSiMDE (<a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a>) 是一套以 Python 與 Flask 框架編寫的網際內容管理系統,</p>
-<p>使用 CMSiMDE 建議使用者安裝 flask flask_cors bs4 lxml pelican markdown leo 等模組. 其中的 flask flask_cors bs4 lxml pelican markdown為啟動 CMSiMDE 的必要模組, 而 leo 則是 CMSMDE 開發者所使用的大綱管理工具, 可以用於與 CMSiMDE 整合的 Pelican blog 及 Reveal.js 網際簡報編輯之用.</p><h2>建立網頁</h2>
-<p>由於 CMSiMDE 帶有動態網頁與靜態網頁等兩個部分, 動態網頁執行時需要該伺服器能夠執行 Python 3, 以及 flask flask_cors bs4 lxml pelican markdown 等模組. 而靜態網頁的伺服則只需要 WWW Server 即可.</p>
+<p>使用 CMSiMDE 建議使用者安裝 flask flask_cors bs4 lxml pelican markdown leo pyopenssl 等模組.</p>
+<p>亦即在 Windows 環境中, 以命令列執行:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">pip install flask flask_cors bs4 lxml pelican markdown leo pyopenssl</pre>
+<p>其中的 flask flask_cors bs4 lxml pelican markdown為啟動 CMSiMDE 的必要模組, 而 leo 則是 CMSMDE 開發者所使用的大綱管理工具, 可以用於與 CMSiMDE 整合的 Pelican blog 及 Reveal.js 網際簡報編輯之用.</p><h2>建立網頁</h2>
+<p>由於 CMSiMDE 帶有動態網頁與靜態網頁等兩個部分, 動態網頁執行時需要該伺服器可執行 Python 3, 以及 flask flask_cors bs4 lxml pelican markdown pyopenssl 等模組. 而靜態網頁的伺服則只需要 WWW Server 即可.</p>
 <p>若使用者在 Github 使用 CMSiMDE 建立網頁, 可以透過 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> template 建立, 步驟與兩種設定方式如下:</p>
 <ol>
 <li>使用者登入 Github</li>
 <li>將瀏覽器連線至 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 頁面後, 點擊 Use this template 按鈕後, 選擇所要採用的 repository 名稱後, 就可以建立以 CMSiMDE 作為子模組的 Github 倉儲.</li>
-<li>假如使用者所選擇的倉儲名稱為: 帳號.github.io, 則 Github 會自動設定該倉儲的 main 分支為 Github Pages 根目錄, 意即一旦 Github Pages 完成轉檔 (提交訊息之後會出現綠勾), 則該倉儲的對應網頁將為: https://帳號.github.io</li>
-<li>若使用利用 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 作為 template 所建立的倉儲名稱並非 帳號.github.io, 則使用者必須自行至該倉儲的 settings/Github Pages 選項中將 main branch 設為 Github Pages 對應的 root 目錄. 之後, Github 將會採用: 帳號.github.io/倉儲名稱 作為與該倉儲對應的 Github Pages 網址.</li>
-</ol>
-<h2>基本操作</h2>
-<p>當使用者利用 cms.bat 啟用動態網站後, 即可利用瀏覽器 <a>https://localhost:9443</a> 在近端維護網站內容, 由於此時動態網站僅在 localhost 啟動, 因此可以使用內建的管理者密碼 "admin" 登入管理網站內容.</p>
+<li>假如使用者所選擇的倉儲名稱為: 帳號.github.io, 則 Github 會自動設定該倉儲的 main 分支為 Github Pages 根目錄, 意即一旦 Github Pages 完成轉檔 (提交訊息之後會出現綠勾), 則該倉儲的對應網頁將為: https://github_帳號.github.io</li>
+<li>若使用利用 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 作為 template 所建立的倉儲名稱並非 github_帳號.github.io, 則使用者必須自行至該倉儲的 settings/Github Pages 選項中將 main branch 設為 Github Pages 對應的 root 目錄. 之後, Github 將會採用: github_帳號.github.io/倉儲名稱 作為與該倉儲對應的 Github Pages 網址.</li>
+</ol><h2>基本操作</h2>
+<p>當使用者利用 cms.bat 啟用動態網站後, 即可利用瀏覽器 <a>https://localhost:9443</a> (系統啟動之 IP 與埠號可以在 init.py 中設定), 在近端維護網站內容, 由於此時動態網站僅在 localhost 啟動, 因此可以使用內建的管理者密碼 "admin" 登入管理網站內容, 若是使用外部 IP 啟動, 則必須自行修改管理者密碼.</p>
 <p>在 Windows 操作系統, cms.bat 內容為:</p>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">python cmsimde/wsgi.py</pre>
 <p>若是在 Mac 或 Linux 操作系統, 則 cms 為可執行檔, 且內容為:</p>
@@ -553,10 +555,14 @@ git push</pre>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">python cmsimde/wsgi.py 1&gt; nul | "C:\Program Files (x86)\Mozilla Firefox\firefox" https://localhost:9443</pre>
 <p>前面 python cmsimde/wsgi.py 加上 1&gt; nul 的目的是因為 pipe 執行時會將前面指令執行結果轉為隨後執行指令的輸入, 而 1&gt; nul 則會將標準輸出的任何資料移除, 任何輸出不會影響 Firefox 執行.</p><h3>編輯網頁內容</h3>
 <p>編輯 CMSiMDE 動態網站中的內容, 可以透過表單中的 <span style="background-color: #ffff99;">Edit All</span> 或 <span style="background-color: #ffff99;">Edit</span> 按鈕進行. <span style="background-color: #ffff99;">Edit</span> 可用於單頁編輯, 操作時先選擇左側的頁面標題, 等系統顯示該頁面內容後, 再點擊上方的 <span style="background-color: #ffff99;">Edit</span> 按鈕即可進入該頁面的編輯模式.</p>
-<p><span style="background-color: #ffff99;">Edit All</span> 通常用於單次刪除所有頁面內容或者只保留特定頁面用, 點擊後會將所有頁面內容置於編輯器中.</p><h3>上傳與引用檔案</h3>
+<p><span style="background-color: #ffff99;">Edit All</span> 通常用於單次刪除所有頁面內容或者只保留特定頁面用, 點擊後會將所有頁面內容置於編輯器中.</p>
+<p>目前採 AJAX 對編輯器存擋, 因此當使用者按下 Save 時, 系統會簡短出現 <span style="background-color: #00ff00;">saved!</span> 畫面, 表示所編輯的內容已經存入 config/content.htm</p>
+<p>當使用者在頁面中新增 H1, H2, 或 H3 標題內容時, 由於系統必須根據這些標題進行分頁, 因此使用者按下 Save 後, 系統畫面將會 reload, 並且回到系統的根目錄.</p>
+<p>若使用者採用 Edit All 同時編輯所有畫面, 按下 Save 後, 系統也會 reload 並回到系統根目錄.</p>
+<p>另外, 當使用者在頁面中刪除 H1, H2 或 H3 標題時, 系統也會在存擋後 reload 至系統根目錄.</p><h3>上傳與引用檔案</h3>
 <p><span style="background-color: #000000; color: #ffffff;">File Upload</span> 可以讓使用者選擇近端多個檔案上傳至動態系統中的 downloads 目錄.</p>
 <p>引用使用者上傳的檔案</p>
-<p style="padding-left: 30px;"><a href="/downloads/python_book_01.pdf">python_book_01.pdf</a></p><h3>上傳與引用圖片</h3>
+<p style="padding-left: 30px;"><a href="/downloads/PythonNotesForProfessionals.pdf">PythonNotesForProfessionals.pdf</a></p><h3>上傳與引用圖片</h3>
 <p><span style="background-color: #000000; color: #ffffff;">Image Upload</span> 可以讓使用者選擇近端多個檔案上傳至動態系統中的 downloads 目錄.</p>
 <p>引用使用者上傳的檔案</p>
 <p style="padding-left: 30px;"><img caption="false" class="add_border" height="227" src="/images/nfu_logo_mde.png" width="200"/></p>
@@ -725,9 +731,7 @@ variables:
 <p style="padding-left: 30px;"><a href="https://github.com/slembcke/Chipmunk2D">https://github.com/slembcke/Chipmunk2D</a></p>
 <p style="padding-left: 60px;"><a href="http://www.pymunk.org/en/latest/">http://www.pymunk.org/en/latest/</a></p>
 <p style="padding-left: 30px;"><a href="https://github.com/mrjleo/python-physics-demos">https://github.com/mrjleo/python-physics-demos</a></p>
-<p style="padding-left: 30px;">cango3d library: <a href="https://www.arc.id.au/Canvas3DGraphics.html">https://www.arc.id.au/Canvas3DGraphics.html</a></p><h3>編輯區存擋</h3>
-<p>在某些情況下, 例如: 使用者修改 Insert/Edit Code 中的程式內容, 編輯區的 Save 卻無法察覺, 使用者在更改此類內容後, 必須自行點擊編輯區下方的 Save 按鍵存檔.</p>
-<h3>IPv6</h3>
+<p style="padding-left: 30px;">cango3d library: <a href="https://www.arc.id.au/Canvas3DGraphics.html">https://www.arc.id.au/Canvas3DGraphics.html</a></p><h3>IPv6</h3>
 <p>參考: <a href="https://github.com/tinymce/tinymce/issues/4409">https://github.com/tinymce/tinymce/issues/4409</a> 中的 <a href="https://github.com/tinymce/tinymce/issues/4409#issuecomment-680282550">url parsing 修改</a>後, 目前已經可以在 local 與 IPv6 網路連線中啟用 tinymce4 editor.</p><h3>上傳資料引用</h3>
 <p>針對有特殊符號的上傳檔案名稱, 例如: Non-Programmer's_Tutorial_for_Python_3.pdf, 目前的 insert/edit link 編輯無法正確將此帶有 "'" 的檔案引入 anchor 標註.</p>
 <p>上傳檔案區的 keyword 查詢目前無法使用, 且上傳檔案的排序在不同操作系統中會產生不同順序排列.</p>
