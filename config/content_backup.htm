@@ -631,7 +631,8 @@ main() {
 <p>使用 iframe 其 src 指向 STL 檔案的絕對 URL 路徑:</p>
 <p>/static/viewstl.html?src=https://mde.tw/cmstemplate/downloads/spikeball.stl</p>
 <p>就可以如下檢視 downloads/spikeball.stl</p>
-<p><iframe height="400" src="/static/viewstl.html?src=https://mde.tw/cmstemplate/downloads/spikeball.stl" width="600"></iframe></p><h2>Gitlab 同步</h2>
+<p><iframe height="400" src="/static/viewstl.html?src=https://mde.tw/cmstemplate/downloads/spikeball.stl" width="600"></iframe></p><h2>置入 disqus</h2>
+<p>利用 Gmail 信箱可以至 <a href="https://blog.disqus.com/">https://blog.disqus.com/</a> 登記一個免費的 Basic 帳號, 取得對應的 Javascript 程式碼 (其實是 html 內容, 包含導入 disqus Javascript 程式庫的資料內容) 之後, 使用者就可以在特定的 CMSiMDE 頁面置入 disqus 討論與回應系統.</p><h2>Gitlab 同步</h2>
 <p>利用 git remote add gitlab <a href="https://gitlab.com/user/repository.git">https://gitlab.com/user/repository.git</a> 可以在近端倉儲中的 .git/config 中新增一個名稱為 gitlab, 且與 <a href="https://gitlab.com/user/repository.git">https://gitlab.com/user/repository.git</a> 倉儲對應的設定. 使用者可以將此倉儲改版內容以 git push gitlab 推向 Gitlab.</p>
 <p>至於 Gitlab Pages 額外需要下列 .yml 檔案進行轉換設定:</p>
 <p>.gitlab-ci.yml</p>
@@ -731,9 +732,7 @@ variables:
 <p style="padding-left: 30px;"><a href="https://github.com/slembcke/Chipmunk2D">https://github.com/slembcke/Chipmunk2D</a></p>
 <p style="padding-left: 60px;"><a href="http://www.pymunk.org/en/latest/">http://www.pymunk.org/en/latest/</a></p>
 <p style="padding-left: 30px;"><a href="https://github.com/mrjleo/python-physics-demos">https://github.com/mrjleo/python-physics-demos</a></p>
-<p style="padding-left: 30px;">cango3d library: <a href="https://www.arc.id.au/Canvas3DGraphics.html">https://www.arc.id.au/Canvas3DGraphics.html</a></p><h3>編輯區存擋</h3>
-<p>在某些情況下, 例如: 使用者修改 Insert/Edit Code 中的程式內容, 編輯區的 Save 卻無法察覺, 使用者在更改此類內容後, 必須自行點擊編輯區下方的 Save 按鍵存檔.</p>
-<h3>IPv6</h3>
+<p style="padding-left: 30px;">cango3d library: <a href="https://www.arc.id.au/Canvas3DGraphics.html">https://www.arc.id.au/Canvas3DGraphics.html</a></p><h3>IPv6</h3>
 <p>參考: <a href="https://github.com/tinymce/tinymce/issues/4409">https://github.com/tinymce/tinymce/issues/4409</a> 中的 <a href="https://github.com/tinymce/tinymce/issues/4409#issuecomment-680282550">url parsing 修改</a>後, 目前已經可以在 local 與 IPv6 網路連線中啟用 tinymce4 editor.</p><h3>上傳資料引用</h3>
 <p>針對有特殊符號的上傳檔案名稱, 例如: Non-Programmer's_Tutorial_for_Python_3.pdf, 目前的 insert/edit link 編輯無法正確將此帶有 "'" 的檔案引入 anchor 標註.</p>
 <p>上傳檔案區的 keyword 查詢目前無法使用, 且上傳檔案的排序在不同操作系統中會產生不同順序排列.</p>
