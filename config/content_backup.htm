@@ -632,7 +632,11 @@ main() {
 <p>/static/viewstl.html?src=https://mde.tw/cmstemplate/downloads/spikeball.stl</p>
 <p>就可以如下檢視 downloads/spikeball.stl</p>
 <p><iframe height="400" src="/static/viewstl.html?src=https://mde.tw/cmstemplate/downloads/spikeball.stl" width="600"></iframe></p><h2>置入 disqus</h2>
-<p>利用 Gmail 信箱可以至 <a href="https://blog.disqus.com/">https://blog.disqus.com/</a> 登記一個免費的 Basic 帳號, 取得對應的 Javascript 程式碼 (其實是 html 內容, 包含導入 disqus Javascript 程式庫的資料內容) 之後, 使用者就可以在特定的 CMSiMDE 頁面置入 disqus 討論與回應系統.</p><h2>Gitlab 同步</h2>
+<p>利用 Gmail 信箱可以至 <a href="https://blog.disqus.com/">https://blog.disqus.com/</a> 登記一個免費的 Basic 帳號, 取得對應的 Javascript 程式碼 (其實是 html 內容, 包含導入 disqus Javascript 程式庫的資料內容) 之後, 使用者就可以在特定的 CMSiMDE 頁面置入 disqus 討論與回應系統.</p>
+<h4>使用範例:</h4>
+<p style="padding-left: 30px;"><a href="https://mde.tw/eng/content/index.html">https://mde.tw/eng/content/index.html</a> </p>
+<p style="padding-left: 30px;"><a href="https://mde.tw/eng/content/Python.html">https://mde.tw/eng/content/Python.html</a> </p>
+<p style="padding-left: 30px;"><a href="https://mde.tw/eng/content/Memo.html">https://mde.tw/eng/content/Memo.html</a> </p><h2>Gitlab 同步</h2>
 <p>利用 git remote add gitlab <a href="https://gitlab.com/user/repository.git">https://gitlab.com/user/repository.git</a> 可以在近端倉儲中的 .git/config 中新增一個名稱為 gitlab, 且與 <a href="https://gitlab.com/user/repository.git">https://gitlab.com/user/repository.git</a> 倉儲對應的設定. 使用者可以將此倉儲改版內容以 git push gitlab 推向 Gitlab.</p>
 <p>至於 Gitlab Pages 額外需要下列 .yml 檔案進行轉換設定:</p>
 <p>.gitlab-ci.yml</p>
@@ -741,7 +745,7 @@ variables:
 <p style="padding-left: 30px;"><a href="https://www.mathjax.org/">https://www.mathjax.org/</a></p><h3>html 分頁</h3>
 <p>分頁失敗時會意外抹除 config\content.htm 中的所有內容</p>
 <p>分頁失敗並不會提供 debug 建議</p>
-<h3>template</h3>
+<h3>靜態搜尋</h3><h3>template</h3>
 <p>cmsimde 針對利用 Flask 產生頁面並未使用 Template, 為了讓程式更加模組化可以考慮納入 <a href="https://www.makotemplates.org/">Mako</a> template engine.</p>
 <h2>ajax</h2>
 <p>共計有四個地方必須修改: <a href="https://mde.tw/lab/blog/2021-kmol-cmsimde-ajax-editor-save.html">https://mde.tw/lab/blog/2021-kmol-cmsimde-ajax-editor-save.html</a></p>
