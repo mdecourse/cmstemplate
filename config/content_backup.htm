@@ -745,7 +745,8 @@ variables:
 <p style="padding-left: 30px;"><a href="https://www.mathjax.org/">https://www.mathjax.org/</a></p><h3>html 分頁</h3>
 <p>分頁失敗時會意外抹除 config\content.htm 中的所有內容</p>
 <p>分頁失敗並不會提供 debug 建議</p>
-<h3>靜態搜尋</h3><h3>template</h3>
+<h3>靜態搜尋</h3>
+<p>已知在帶有 Brython document.query[] 程式頁面架構下, 無法使用靜態網頁關鍵字搜尋.</p><h3>template</h3>
 <p>cmsimde 針對利用 Flask 產生頁面並未使用 Template, 為了讓程式更加模組化可以考慮納入 <a href="https://www.makotemplates.org/">Mako</a> template engine.</p>
 <h2>ajax</h2>
 <p>共計有四個地方必須修改: <a href="https://mde.tw/lab/blog/2021-kmol-cmsimde-ajax-editor-save.html">https://mde.tw/lab/blog/2021-kmol-cmsimde-ajax-editor-save.html</a></p>
@@ -922,6 +923,8 @@ variables:
     return outstring
     
 </pre>
-<p></p><h2>summernote</h2>
-<p><a href="https://github.com/summernote/summernote">https://github.com/summernote/summernote</a> </p>
+<p></p><h2>black</h2>
+<p>準備黑一下 cmsimde: <a href="https://github.com/psf/black">https://github.com/psf/black</a></p>
+<h2>summernote</h2>
+<p><a href="https://github.com/summernote/summernote">https://github.com/summernote/summernote</a></p>
 <p></p>
