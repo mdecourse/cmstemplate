@@ -748,7 +748,8 @@ variables:
 <h3>靜態搜尋</h3>
 <p>已知在帶有 Brython document.query[] 程式頁面架構下, 無法使用靜態網頁關鍵字搜尋.</p><h3>template</h3>
 <p>cmsimde 針對利用 Flask 產生頁面並未使用 Template, 為了讓程式更加模組化可以考慮納入 <a href="https://www.makotemplates.org/">Mako</a> template engine.</p>
-<h2>ajax</h2>
+<h3>重複標題頁面</h3>
+<p>已知重複標題頁面編輯時, 只能儲存前頁面的內容, 後續重複標題頁面無法在單頁模式編輯下更改標題與內容. 目前只能透過 Edit All 修改.</p><h2>ajax</h2>
 <p>共計有四個地方必須修改: <a href="https://mde.tw/lab/blog/2021-kmol-cmsimde-ajax-editor-save.html">https://mde.tw/lab/blog/2021-kmol-cmsimde-ajax-editor-save.html</a></p>
 <p>第一就是 sh4tinymce 長久以來的 bug. 可以透過 tinymce.activeEditor.setDirty(true); 知會 editor, 在 onSubmitFunction 將 highlighter 引用的程式碼插入 editor 時, 讓表單中的 Save 可以點擊.</p>
 <p>另外兩項更動, 則是將 savePage 與 ssavePage 中移除跳行的程式碼, 予以註解.</p>
